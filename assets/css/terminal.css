@@ -1,0 +1,286 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --gray: #2E2E2E;
+  --purple: rgb(135, 42, 182);
+  --blue: rgb(84, 170, 255);
+  --green: greenyellow;
+  --red: red;
+}
+
+
+body {
+  font-family: monospace;
+  font-size: large;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  overflow: hidden;
+  transition: 0.5s ease;
+}
+
+
+.termlogo {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 85px;
+  height: 90px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: solid 1.5px rgba(0, 0, 233, 0);
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  transition: background-color 0.2s ease;
+}
+
+.termlogo:hover {
+  background-color: rgba(0, 0, 233, 0.1);
+}
+
+.termlogo-clicked {
+  background-color: rgba(0, 0, 233, 0.1);
+  border: solid 1.5px rgba(0, 0, 233, 0.1);
+}
+
+.termlogo img {
+  height: 50px;
+  width: 50px;
+}
+
+
+.terminal-div {
+  height: 450px;
+  width: 650px;
+  min-width: 350px;
+  min-height: 200px;
+  left: 35%;
+  top: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--gray);
+  background-image: linear-gradient(to right, var(--gray), #565656);
+  position: absolute;
+  border-radius: 5px;
+  resize: both;
+  overflow-y: auto;
+  overflow-x: hidden;
+  visibility: visible;
+  z-index: 1;
+}
+
+
+.terminal-header {
+  height: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: grab;
+}
+
+.title {
+  margin-right: auto;
+  margin-left: 5px;
+  color: white;
+  font-family: monospace;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+
+.control {
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.control svg path {
+  stroke: white;
+}
+
+.x:hover { background-color: red; }
+.s:hover { background-color: gray; }
+
+
+.terminal-chat {
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  padding-top: 10px;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+}
+
+.terminal-chat::-webkit-scrollbar { width: 6px; }
+.terminal-chat::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 3px;
+}
+
+.terminal-chat div { margin-top: 10px; margin-bottom: 10px; }
+
+li { list-style-type: square; }
+
+.ls-cont { display: grid; grid-template-columns: repeat(3, 1fr); }
+.ls-cont li { list-style-type: none; }
+
+.user-comment { margin-top: 20px; }
+.comments { display: flex; flex-direction: column; }
+
+.comment-div { display: grid; grid-template-columns: auto 8fr; gap: 10px; margin-top: 20px; }
+
+.user-command {
+  width: 95%;
+  border: none;
+  font-family: monospace;
+  caret-color: white;
+  color: white;
+  font-size: large;
+  touch-action: none;
+}
+
+.user-command:focus { outline: none; }
+
+.red { color: var(--red); }
+.purple { color: var(--purple); }
+.blue { color: var(--blue); }
+.green { color: var(--green); }
+span { white-space: nowrap; }
+
+
+.terminal-minimized {
+  height: 35px;
+  width: 145px;
+  background-color: var(--gray);
+  background-image: linear-gradient(to right, var(--gray), #565656);
+  border-radius: 15px 15px 0 0;
+  margin-left: 20px;
+  color: white;
+  display: flex;
+  text-align: center;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.terminal-minimized:hover {
+  background-image: linear-gradient(to left, var(--gray), #565656);
+}
+
+.terminal-div.maximized {
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  border-radius: 0 !important;
+  resize: none !important; 
+  z-index: 9999; 
+  transition: all 0.3s ease;
+}
+
+.default {
+  background-image: linear-gradient(to right, rgb(192, 142, 250), rgb(115, 7, 238));
+}
+
+.default .terminal-chat,
+.default .user-command {
+  background-color: black;
+  color: white;
+}
+
+.default .terminal-chat { scrollbar-color: var(--gray) black; }
+
+
+.dark {
+  background-color: black;
+  background-image: none;
+}
+
+.dark .terminal-chat,
+.dark .user-command {
+  background-color: black;
+  color: rgb(33, 247, 33);
+  scrollbar-color: gray black;
+}
+
+.dark .blue { color: green; }
+
+.dark .termlogo { color: white; }
+.dark .termlogo svg path { fill: gray; }
+
+.dark .termlogo:hover { background-color: rgba(255, 255, 255, 0.2); }
+
+
+.light {
+  background-image: linear-gradient(to left, rgb(208, 243, 255), white);
+}
+
+.light .termlogo { color: navy; }
+.light .termlogo svg path { fill: paleturquoise; }
+.light .terminal-header { background-color: lightskyblue; }
+
+.light .terminal-chat,
+.light .terminal-chat input,
+.light .user-command {
+  color: navy;
+  background-color: white;
+  scrollbar-color: lightblue white;
+  caret-color: navy;
+}
+
+.light .termlogo:hover { background-color: rgba(120, 190, 255, 0.3); }
+
+
+.cute {
+  background-image: linear-gradient(to right, rgb(239, 208, 255), white);
+}
+
+.cute .termlogo { color: palevioletred; }
+.cute .termlogo svg path { fill: palevioletred; }
+.cute .terminal-header { background-color: pink; }
+.cute .terminal-minimized { background-color: pink; }
+
+.cute .terminal-chat,
+.cute .terminal-chat input,
+.cute .user-command {
+  color: palevioletred;
+  background-color: white;
+  scrollbar-color: pink white;
+  caret-color: palevioletred;
+}
+
+.cute .termlogo:hover { background-color: rgba(219, 120, 255, 0.3); }
+
+@media screen and (max-width: 480px) {
+  body { font-size: 16px; }
+
+  .terminal-div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+}
