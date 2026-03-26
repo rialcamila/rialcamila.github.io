@@ -45,7 +45,6 @@ let rootCmds = {
     "education": ["Programming Course - IEFP Gaia (Currently enrolled)", "Bachelor in Art History - Rio de Janeiro State University (GPA: 3.98)", "Audiovisual Production - Adolpho Bloch Technical State School", "Culinary Arts and Management - School of Hospitality and Tourism Porto", "Exchange Student in India - Culinary Arts and Management", "Exchange Student Erasmus Bilbao"],
     "skills": `<div><p>Languages:  <span class="purple">Portuguese</span> (native),  <span class="purple">English</span> (fluent),  <span class="purple">Spanish</span> (advanced),  <span class="purple">French</span> (basic),  <span class="purple">German</span> (basic)</p>
         <p>Programming languages: Python, C, C#, JAVA, HTML, CSS and JavaScript</p>
-        <p>Frameworks & IDE: Next.JS, React.JS, SQL, MongoDB and IntelliJ</p>
         <p>Developer Tools: Git/Github</p>
         <p>OS: Windows, Linux, MacOS</p></div>`,
     "interests": `<div>I like coding, designing, drawing, writing & reading novels. </div>`,
