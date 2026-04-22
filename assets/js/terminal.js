@@ -44,9 +44,9 @@ let rootCmds = {
     "about": `<div>Hey, I'm <span class="purple">Camila Rial</span>! <br> I'm a programming student who wants to build good, responsive and secure websites and aplications!</div>`,
     "education": ["Programming Course - IEFP Gaia (Currently enrolled)", "Bachelor in Art History - Rio de Janeiro State University (GPA: 3.98)", "Audiovisual Production - Adolpho Bloch Technical State School", "Culinary Arts and Management - School of Hospitality and Tourism Porto", "Exchange Student in India - Culinary Arts and Management", "Exchange Student Erasmus Bilbao"],
     "skills": `<div><p>Languages:  <span class="purple">Portuguese</span> (native),  <span class="purple">English</span> (fluent),  <span class="purple">Spanish</span> (advanced),  <span class="purple">French</span> (basic),  <span class="purple">German</span> (basic)</p>
-        <p>Programming languages: Python, C, C#, JAVA, HTML, CSS and JavaScript</p>
-        <p>Developer Tools: Git/Github</p>
-        <p>OS: Windows, Linux, MacOS</p></div>`,
+        <p>Programming languages: Python, C, C#, JAVA, HTML, CSS, JavaScript, ASP.Net, PHP, SQL and MongoDB.</p>
+        <p>Developer Tools: Git/Github.</p>
+        <p>OS: Windows, Linux, MacOS.</p></div>`,
     "interests": `<div>I like coding, designing, drawing, writing & reading novels. </div>`,
     "information": `<div>This is how this project was made:
             <br/><br/>
@@ -56,7 +56,7 @@ let rootCmds = {
             Previous commands entered this session can be accessed by using the up/down arrows on your keyboard. Pressing TAB will complete the input.<br/>
             <br/><br/>
                                 </div>`,
-    "certificates": ["CS50's Introduction to Databases with SQL - Harvard University", "HTML Essentials - CISCO Networking Academy", "CSS Essentials - - CISCO Networking Academy", "Computer Hardware Basics - CISCO Networking Academy", "Operating Systems Basics - CISCO Networking Academy", "OWASP Top10 - TryHackMe", "C Advanced Course - CISCO Networking Academy (loading...)"],
+    "certificates": ["CS50's Introduction to Databases with SQL - Harvard University", "HTML Essentials - CISCO Networking Academy", "CSS Essentials - CISCO Networking Academy", "Computer Hardware Basics - CISCO Networking Academy", "Operating Systems Basics - CISCO Networking Academy", "OWASP Top10 - TryHackMe", "C Advanced Course - CISCO Networking Academy (loading...)"],
     "experience": ["Post-Production Department - TV Globo", "Airport Terminal Agent - RioGaleão (GIG)", "Art Gallery Assistant - Anna Maria Niemeyer Art Gallery", "GameMaster - D3 Escape Room"],
     "get linkedin": "https://www.linkedin.com/in/camila-rial/",
     "get github": "https://www.github.com/rialcamila",
